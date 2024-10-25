@@ -1,0 +1,26 @@
+---
+- hosts: all
+  gather_facts: true
+  become: true
+  tasks:
+  - import_role:
+      name: base
+    tags: base
+
+- hosts: all
+  gather_facts: true
+  become: true
+  tasks:
+  - import_role:
+      name: app
+    tags: app
+
+- hosts: all
+  gather_facts: true
+  become: true
+  tasks:
+  - import_role:
+      name: nginx
+    tags: nginx
+
+
